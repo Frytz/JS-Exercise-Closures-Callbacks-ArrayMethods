@@ -146,7 +146,10 @@ function processProduct(num1, num2, callback) {
  * should return "sad".
 */
 function processContains(item, list, callback) {
-  console.log(item, list)
+  const bool = list.filter ( contain => contain === item);
+  if (bool.length > 0) {
+    return callback(true);
+  } else return callback(false);
 }
 
 /**
