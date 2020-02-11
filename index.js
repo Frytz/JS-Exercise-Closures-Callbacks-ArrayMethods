@@ -13,9 +13,9 @@
  * Example of usage of this higher-order function:
  * Invoking `processFirstItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'foofoo'.
-*/
+ */
 function processFirstItem(stringList, callback) {
-  return callback(stringList[0])
+    return callback(stringList[0])
 }
 
 // ⭐️ Example Challenge END ⭐️
@@ -167,9 +167,9 @@ function processContains(item, list, callback) {
  * 
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
-*/
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+ */
+function processDuplicateFree( /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */ ) {
+    /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -236,9 +236,9 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  * 
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns a number which is the sum of the donations by all runners.
-*/
-function tallyUpDonations(/* CODE HERE */) {
-  /* CODE HERE */
+ */
+function tallyUpDonations( /* CODE HERE */ ) {
+    /* CODE HERE */
 }
 
 /////////////// CLOSURES ///////////////
@@ -256,7 +256,7 @@ function tallyUpDonations(/* CODE HERE */) {
  * counter() // should return 1
  * counter() // should return 2
  * etc
-*/
+ */
 function counterMaker() {
   // BROKEN CODE STARTS
   let count = - 1;
@@ -301,20 +301,20 @@ function counterMakerWithLimit(maxValue) {
 /////////////// END OF CHALLENGE ///////////////
 
 if (typeof exports !== 'undefined') {
-  // IGNORE: Test/Env Detected
-  // For Node/Non-browser test env
-  module.exports = module.exports || {}
-  if (processFirstItem) { module.exports.processFirstItem = processFirstItem }
-  if (processLength) { module.exports.processLength = processLength }
-  if (processLastItem) { module.exports.processLastItem = processLastItem }
-  if (processSum) { module.exports.processSum = processSum }
-  if (processProduct) { module.exports.processProduct = processProduct }
-  if (processContains) { module.exports.processContains = processContains }
-  if (processDuplicateFree) { module.exports.processDuplicateFree = processDuplicateFree }
-  if (getFullNames) { module.exports.getFullNames = getFullNames }
-  if (firstNamesAllCaps) { module.exports.firstNamesAllCaps = firstNamesAllCaps }
-  if (getRunnersByTShirtSize) { module.exports.getRunnersByTShirtSize = getRunnersByTShirtSize }
-  if (tallyUpDonations) { module.exports.tallyUpDonations = tallyUpDonations }
-  if (counterMaker) { module.exports.counterMaker = counterMaker }
-  if (counterMakerWithLimit) { module.exports.counterMakerWithLimit = counterMakerWithLimit }
+    // IGNORE: Test/Env Detected
+    // For Node/Non-browser test env
+    module.exports = module.exports || {}
+    if (processFirstItem) { module.exports.processFirstItem = processFirstItem }
+    if (processLength) { module.exports.processLength = processLength }
+    if (processLastItem) { module.exports.processLastItem = processLastItem }
+    if (processSum) { module.exports.processSum = processSum }
+    if (processProduct) { module.exports.processProduct = processProduct }
+    if (processContains) { module.exports.processContains = processContains }
+    if (processDuplicateFree) { module.exports.processDuplicateFree = processDuplicateFree }
+    if (getFullNames) { module.exports.getFullNames = getFullNames }
+    if (firstNamesAllCaps) { module.exports.firstNamesAllCaps = firstNamesAllCaps }
+    if (getRunnersByTShirtSize) { module.exports.getRunnersByTShirtSize = getRunnersByTShirtSize }
+    if (tallyUpDonations) { module.exports.tallyUpDonations = tallyUpDonations }
+    if (counterMaker) { module.exports.counterMaker = counterMaker }
+    if (counterMakerWithLimit) { module.exports.counterMakerWithLimit = counterMakerWithLimit }
 }
