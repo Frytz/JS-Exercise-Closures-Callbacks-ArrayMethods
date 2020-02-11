@@ -89,7 +89,7 @@ function processLastItem(stringList, callback) {
  * should return 1000.
 */
 function processSum(numberList, callback) {
-  
+  //console.log(numberList)
   let initialValue = 0
 let sum = numberList.reduce(function (accumulator, currentValue) {
     return accumulator + currentValue
@@ -97,14 +97,6 @@ let sum = numberList.reduce(function (accumulator, currentValue) {
 //console.log(sum)
 return callback(sum)  
   }
-
-
-  
-  
-
-
-  
-
 
 
 /**
@@ -126,10 +118,10 @@ return callback(sum)
  * should return 1000.
 */
 function processProduct(num1, num2, callback) {
-  console.log(num1, num2)
+  //console.log(num1, num2)
   let initialValue = 0;
   var product = num1 * num2 + initialValue;
-  console.log(product)
+  //console.log(product)
   return callback(product)
 }
 
@@ -153,8 +145,8 @@ function processProduct(num1, num2, callback) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, callback) {
+  console.log(item, list)
 }
 
 /**
@@ -198,7 +190,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+function getFullNames(runners) {
   /* CODE HERE */
 }
 
@@ -214,7 +206,7 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
   /* CODE HERE */
 }
 
@@ -231,7 +223,7 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
+function getRunnersByTShirtSize(runners, tShirtSize) {
   /* CODE HERE */
 }
 
@@ -267,12 +259,12 @@ function tallyUpDonations(/* CODE HERE */) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count = - 1;
+  return function () {
+    return ++count;
   }
   // BROKEN CODE ENDS
-}
+};
 
 /**
  * ### Challenge `counterMakerWithLimit`
@@ -294,8 +286,14 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(maxValue) {
+  let count = -1;
+  return function (){
+    if (count === maxValue) {
+      count = -1;
+    };
+    return ++count;
+  };
 }
 
 /////////////// END OF CHALLENGE ///////////////
